@@ -112,7 +112,7 @@ if ENV:
             "Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from SaitamaRobot.config import Development as Config
+    from SungJinwooRobot.config import Development as Config
     TOKEN = Config.TOKEN
 
     try:
@@ -217,7 +217,7 @@ else:
 
 aiohttpsession = ClientSession()
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("saitama", API_ID, API_HASH)
+telethn = TelegramClient("SungJinwooRobot", API_ID, API_HASH)
 pgram = Client("SungPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.SungJinwooRobot
