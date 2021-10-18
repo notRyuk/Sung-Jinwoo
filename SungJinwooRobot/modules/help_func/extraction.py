@@ -1,7 +1,7 @@
 from typing import List, Optional
 
-from SaitamaRobot import LOGGER
-from SaitamaRobot.modules.users import get_user_id
+from SungJinwooRobot import LOGGER
+from SungJinwooRobot.modules.users import get_user_id
 from telegram import Message, MessageEntity
 from telegram.error import BadRequest
 
@@ -22,7 +22,7 @@ def extract_user(message: Message, args: List[str]) -> Optional[int]:
 
 
 def extract_user_and_text(message: Message,
-                          args: List[str]) -> (Optional[int], Optional[str]):
+                          args: List[str]) -> tuple(Optional[int], Optional[str]):
     prev_message = message.reply_to_message
     split_text = message.text.split(None, 1)
 
@@ -96,7 +96,7 @@ def extract_text(message) -> str:
 
 
 def extract_unt_fedban(message: Message,
-                       args: List[str]) -> (Optional[int], Optional[str]):
+                       args: List[str]) -> tuple(Optional[int], Optional[str]):
     prev_message = message.reply_to_message
     split_text = message.text.split(None, 1)
 
