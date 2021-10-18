@@ -203,6 +203,11 @@ __help__ = """
 
 *Similar Commands:*
  • `/reminders`, `/myreminders`
+ • `/clearmyreminders`, `/clearallmyreminders`
+
+*Usage:*
+ • `/setreminder 30s reminder`*:* Here the time format is same as the time format in muting but with extra seconds(s)
+ • `/clearreminder 1234567890123456789`
 """
 
 RemindersHandler = CommandHandler(['reminders', 'myreminders'], reminders, filters = Filters.chat_type.private)
